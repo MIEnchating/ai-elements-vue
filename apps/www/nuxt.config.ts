@@ -63,9 +63,13 @@ export default defineNuxtConfig({
     },
   },
 
-  // nitro: {
-  //   preset: 'cloudflare-module',
-  // },
+  nitro: {
+    preset: 'vercel',
+    externals: {
+      // 告诉 Nitro 将这些包打包到构建产物中，而不是依赖 node_modules
+      inline: ['shiki', 'streamdown-vue', '@shikijs/core'],
+    },
+  },
 
   alias: {
     // Replace Playwright with a mock to bypass Cloudflare build restrictions.
