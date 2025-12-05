@@ -63,9 +63,9 @@ export default defineNuxtConfig({
     },
   },
 
-  nitro: {
-    preset: 'cloudflare-module',
-  },
+  // nitro: {
+  //   preset: 'cloudflare-module',
+  // },
 
   ogImage: {
     enabled: false,
